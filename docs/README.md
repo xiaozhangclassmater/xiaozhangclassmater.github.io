@@ -9,9 +9,8 @@
 
 `>10.0.0`
 
-[中文文档](https://xiaozhangclassmater.github.io/minivueBarrage-docs-web/#/home)
+[中文文档](https://xiaozhangclassmater.github.io/minivueBarrage-docs-web/#/dashboard)
 
-![1689842440686](/assets/1689842440686.png)
 
 如何使用 ？ 
 
