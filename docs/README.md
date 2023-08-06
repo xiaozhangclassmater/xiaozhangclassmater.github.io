@@ -11,9 +11,6 @@
 
 [中文文档](https://xiaozhangclassmater.github.io/minivueBarrage-docs-web/#/dashboard)
 
-![1689842440686](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/00bbb720ed084520adcafaf7a4db96f7~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?)
-
-
 
 如何使用 ？ （How to use it?）
 
