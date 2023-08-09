@@ -22,7 +22,7 @@ module.exports = {
         text: '计算机网络', link: '/web/netWork/netWork.md'
       },
       {
-        text: '提炼面试题', link: '/web/InterviewQuestion/InterviewQuestion.md'
+        // text: '提炼面试题', link: '/web/InterviewQuestion/InterviewQuestion.md'
       }
     ],
     sidebar: [
@@ -58,11 +58,11 @@ module.exports = {
             title: 'React',
             path: '../web/React/React.md',
           },
-          {
-            collapsable: true,
-            title: '提炼总结面试题',
-            path: '../web/InterviewQuestion/InterviewQuestion.md',
-          },
+          // {
+          //   collapsable: true,
+          //   title: '提炼总结面试题',
+          //   path: '../web/InterviewQuestion/InterviewQuestion.md',
+          // },
           {
             collapsable: true,
             title: '计算机网络',
