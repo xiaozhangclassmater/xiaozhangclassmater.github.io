@@ -7,22 +7,28 @@ module.exports = {
     nav: [
       { text: '首页', link: 'https://xiaozhangclassmater.github.io/minivueBarrage-docs-web/#/dashboard', target: '_self', rel: '' },
       {
-        text: 'JavaScript', link: '/web/javascript/javascript.md'
+        text: 'JavaScript笔记', link: '/web/javascript/javascript.md'
       },
       {
-        text: 'vue3', link: '/web/vue/vue3.md'
+        text: 'vue笔记', link: '/web/vue/vue3.md'
       },
       {
-        text: 'react', link: '/web/React/React.md'
+        text: 'react笔记', link: '/web/React/React.md'
       },
       {
-        text: 'webpack', link: '/web/webpack/webpack.md'
+        text: 'NodeJS笔记', link: '/web/node/Node.md'
       },
       {
-        text: '计算机网络', link: '/web/netWork/netWork.md'
+        text: 'webpack笔记', link: '/web/webpack/webpack.md'
       },
       {
-        // text: '提炼面试题', link: '/web/InterviewQuestion/InterviewQuestion.md'
+        text: 'sql笔记', link: '/web/sql/mysql.md'
+      },
+      {
+        text: '计算机网络笔记', link: '/web/netWork/netWork.md'
+      },
+      {
+        text: '面试题', link: '/web/InterviewQuestion/InterviewQuestion.md'
       }
     ],
     sidebar: [
@@ -58,11 +64,21 @@ module.exports = {
             title: 'React',
             path: '../web/React/React.md',
           },
-          // {
-          //   collapsable: true,
-          //   title: '提炼总结面试题',
-          //   path: '../web/InterviewQuestion/InterviewQuestion.md',
-          // },
+          {
+            collapsable: true,
+            title: 'NodeJS',
+            path: '../web/node/Node.md',
+          },
+          {
+            collapsable: true,
+            title: 'Mysql',
+            path: '../web/sql/mysql.md',
+          },
+          {
+            collapsable: true,
+            title: '面试题',
+            path: '../web/InterviewQuestion/InterviewQuestion.md',
+          },
           {
             collapsable: true,
             title: '计算机网络',
