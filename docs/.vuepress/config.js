@@ -25,6 +25,9 @@ module.exports = {
         text: 'sql笔记', link: '/web/sql/mysql.md'
       },
       {
+        text: 'Node_ORM框架笔记', link: '/web/ORM/ORM.md'
+      },
+      {
         text: '计算机网络笔记', link: '/web/netWork/netWork.md'
       },
       {
@@ -73,6 +76,11 @@ module.exports = {
             collapsable: true,
             title: 'Mysql',
             path: '../web/sql/mysql.md',
+          },
+          {
+            collapsable: true,
+            title: 'Node_ORM',
+            path: '../web/ORM/ORM.md',
           },
           {
             collapsable: true,
