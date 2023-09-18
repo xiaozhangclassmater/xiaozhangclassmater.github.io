@@ -332,25 +332,12 @@ where c.`name` = '蚂蚁金服' or c.`name` = '腾讯科技'
 
 ### 数学函数
 
-1.  ~~~sql
-   select ABS (-1) -- 返回绝对值 
-   ~~~
+1.  select ABS (-1) -- 返回绝对值 
+2.  SELECT CEILING(1.4) -- 向上取整 
 
-2. ~~~sql
-   SELECT CEILING(1.4) -- 向上取整 
-   ~~~
-
-3. ~~~sql
-   select FLOOR(1.5) -- 向下取整
-   ~~~
-
-4. ~~~sql
-   select MOD(10,2) --返回取模的余数
-   ~~~
-
-5. ~~~sql
-   select TRUNCATE(8512.56645,2) --截取小数点后几位
-   ~~~
+3.  select FLOOR(1.5) -- 向下取整
+4.  select MOD(10,2) --返回取模的余数
+5.  select TRUNCATE(8512.56645,2) --截取小数点后几位
 
 ...等等
 
@@ -491,28 +478,7 @@ const connection = mysql.createPool({
   port : 3306,
   user : 'root',
   password : 'cjxy200420',
-  database : 'stydymys	ql'
+  database : 'stydymysql'
 })
 ~~~
 
-## ORM框架
-
-**1 ： Object Relational Mapping （对象关系映射）**
-
-**作用**
-
-1. 通过`ORM`框架，可以自动的把程序中的对象和数据库进行关联，更方便管理
-2. `ORM`框架会隐藏具体的数据库底层细节，让开发者使用同样的数据库操作接口，完全对不同的数据库操作
-
-**优势**
-
-1. 开发者不需要关心数据库，只需要关心自己定义的`model`即可生成数据库表字段
-2. 可轻易的完成数据库的移植
-3. 无需拼接复杂的sql语句即可完成精确查询功能
-4. 连接各个数据库，统一内部操作数据，不需要手动写sql，简单高效，可维护性高
-
-
-
-![1693878830911](./assets/1693878830911.png)
-
-![1693879182567](./assets/1693879182567.png)

@@ -25,7 +25,13 @@ module.exports = {
         text: 'sql笔记', link: '/web/sql/mysql.md'
       },
       {
+        text: '浏览器笔记', link: '/web/Browser/Browser.md'
+      },
+      {
         text: 'Node_ORM框架笔记', link: '/web/ORM/ORM.md'
+      },
+      {
+        text: 'express笔记', link: '/web/express/express.md'
       },
       {
         text: '计算机网络笔记', link: '/web/netWork/netWork.md'
@@ -81,6 +87,16 @@ module.exports = {
             collapsable: true,
             title: 'Node_ORM',
             path: '../web/ORM/ORM.md',
+          },
+          {
+            collapsable: true,
+            title: 'express',
+            path: '../web/express/express.md',
+          },
+          {
+            collapsable: true,
+            title: 'Browser',
+            path: '../web/Browser/Browser.md',
           },
           {
             collapsable: true,
