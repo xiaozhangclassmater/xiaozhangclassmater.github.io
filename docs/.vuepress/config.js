@@ -38,6 +38,9 @@ module.exports = {
       },
       {
         text: '面试题', link: '/web/InterviewQuestion/InterviewQuestion.md'
+      },
+      {
+        text: '工作笔记', link: '/web/studyNote/index.md'
       }
     ],
     sidebar: [
@@ -108,7 +111,11 @@ module.exports = {
             title: '计算机网络',
             path: '../web/netWork/netWork.md',
           },
-
+          {
+            collapsable: true,
+            title: '工作笔记',
+            path: '../web/studyNote/index.md',
+          },
 
         ],
         initialOpenGroupIndex: -1 // 可选的, 默认值是 0
