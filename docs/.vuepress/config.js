@@ -57,68 +57,130 @@ module.exports = {
         title: '个人笔记',
         children: [
           {
-            collapsable: true,
+            collapsable: false,
             title: 'JavaScript',
             path: '../web/javascript/javascript.md',
           },
           {
-            collapsable: true,
+            collapsable: false,
             title: 'webpack',
             path: '../web/webpack/webpack.md',
           },
           {
-            collapsable: true,
+            collapsable: false,
             title: 'vue3',
             path: '../web/vue/vue3.md',
           },
           {
-            collapsable: true,
+            collapsable: false,
             title: 'React',
             path: '../web/React/React.md',
           },
           {
-            collapsable: true,
+            collapsable: false,
             title: 'NodeJS',
             path: '../web/node/Node.md',
           },
           {
-            collapsable: true,
+            collapsable: false,
             title: 'Mysql',
             path: '../web/sql/mysql.md',
           },
           {
-            collapsable: true,
+            collapsable: false,
             title: 'Node_ORM',
             path: '../web/ORM/ORM.md',
           },
           {
-            collapsable: true,
+            collapsable: false,
             title: 'express',
             path: '../web/express/express.md',
           },
           {
-            collapsable: true,
+            collapsable: false,
             title: 'Browser',
             path: '../web/Browser/Browser.md',
           },
           {
-            collapsable: true,
+            collapsable: false,
             title: '面试题',
             path: '../web/InterviewQuestion/InterviewQuestion.md',
           },
           {
-            collapsable: true,
+            collapsable: false,
             title: '计算机网络',
             path: '../web/netWork/netWork.md',
           },
           {
-            collapsable: true,
+            collapsable: false,
             title: '工作笔记',
-            path: '../web/studyNote/index.md',
+            path: '../web/studyNote/studyNote.md',
           },
+        ]
+        // children: [
+        //   {
+        //     collapsable: true,
+        //     text: 'JavaScript',
+        //     path: '../web/javascript/javascript.md',
+        //   },
+        //   {
+        //     collapsable: true,
+        //     title: 'webpack',
+        //     path: '../web/webpack/webpack.md',
+        //   },
+        //   {
+        //     collapsable: true,
+        //     title: 'vue3',
+        //     path: '../web/vue/vue3.md',
+        //   },
+        //   {
+        //     collapsable: true,
+        //     title: 'React',
+        //     path: '../web/React/React.md',
+        //   },
+        //   {
+        //     collapsable: true,
+        //     title: 'NodeJS',
+        //     path: '../web/node/Node.md',
+        //   },
+        //   {
+        //     collapsable: true,
+        //     title: 'Mysql',
+        //     path: '../web/sql/mysql.md',
+        //   },
+        //   {
+        //     collapsable: true,
+        //     title: 'Node_ORM',
+        //     path: '../web/ORM/ORM.md',
+        //   },
+        //   {
+        //     collapsable: true,
+        //     title: 'express',
+        //     path: '../web/express/express.md',
+        //   },
+        //   {
+        //     collapsable: true,
+        //     title: 'Browser',
+        //     path: '../web/Browser/Browser.md',
+        //   },
+        //   {
+        //     collapsable: true,
+        //     title: '面试题',
+        //     path: '../web/InterviewQuestion/InterviewQuestion.md',
+        //   },
+        //   {
+        //     collapsable: true,
+        //     title: '计算机网络',
+        //     path: '../web/netWork/netWork.md',
+        //   },
+        //   {
+        //     collapsable: true,
+        //     title: '工作笔记',
+        //     path: '../web/studyNote/index.md',
+        //   },
 
-        ],
-        initialOpenGroupIndex: -1 // 可选的, 默认值是 0
+        // ],
+        // initialOpenGroupIndex: -1 // 可选的, 默认值是 0
       }
     ]
   },
