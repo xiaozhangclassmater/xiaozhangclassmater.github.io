@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ORM框架（sqeuelize）🎃</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.878647fa.css" as="style"><link rel="preload" href="/assets/js/app.a4d93d27.js" as="script"><link rel="preload" href="/assets/js/2.714b023e.js" as="script"><link rel="preload" href="/assets/js/6.33658437.js" as="script"><link rel="prefetch" href="/assets/js/10.25a5f872.js"><link rel="prefetch" href="/assets/js/11.871617f1.js"><link rel="prefetch" href="/assets/js/12.802f7c1e.js"><link rel="prefetch" href="/assets/js/13.91ba2de5.js"><link rel="prefetch" href="/assets/js/14.1499a04c.js"><link rel="prefetch" href="/assets/js/15.68fdac45.js"><link rel="prefetch" href="/assets/js/16.bfcf4d3a.js"><link rel="prefetch" href="/assets/js/17.d6f14b0f.js"><link rel="prefetch" href="/assets/js/18.666f3b89.js"><link rel="prefetch" href="/assets/js/19.4996a63e.js"><link rel="prefetch" href="/assets/js/3.6ca72554.js"><link rel="prefetch" href="/assets/js/4.0eaab0ad.js"><link rel="prefetch" href="/assets/js/5.0790f7b0.js"><link rel="prefetch" href="/assets/js/7.a39c1dba.js"><link rel="prefetch" href="/assets/js/8.c40ed4d0.js"><link rel="prefetch" href="/assets/js/9.653adda9.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.878647fa.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="https://xiaozhangclassmater.github.io/minivueBarrage-docs-web/#/dashboard" target="_self" class="nav-link external">
+  首页
+  <!----></a></div><div class="nav-item"><a href="/web/javascript/javascript.html" class="nav-link">
+  JavaScript笔记
+</a></div><div class="nav-item"><a href="/web/vue/vue3.html" class="nav-link">
+  vue笔记
+</a></div><div class="nav-item"><a href="/web/React/React.html" class="nav-link">
+  react笔记
+</a></div><div class="nav-item"><a href="/web/node/Node.html" class="nav-link">
+  NodeJS笔记
+</a></div><div class="nav-item"><a href="/web/webpack/webpack.html" class="nav-link">
+  webpack笔记
+</a></div><div class="nav-item"><a href="/web/sql/mysql.html" class="nav-link">
+  sql笔记
+</a></div><div class="nav-item"><a href="/web/Browser/Browser.html" class="nav-link">
+  浏览器笔记
+</a></div><div class="nav-item"><a href="/web/ORM/ORM.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Node_ORM框架笔记
+</a></div><div class="nav-item"><a href="/web/express/express.html" class="nav-link">
+  express笔记
+</a></div><div class="nav-item"><a href="/web/netWork/netWork.html" class="nav-link">
+  计算机网络笔记
+</a></div><div class="nav-item"><a href="/web/InterviewQuestion/InterviewQuestion.html" class="nav-link">
+  面试题
+</a></div><div class="nav-item"><a href="/web/studyNote/index.html" class="nav-link">
+  工作笔记
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="https://xiaozhangclassmater.github.io/minivueBarrage-docs-web/#/dashboard" target="_self" class="nav-link external">
+  首页
+  <!----></a></div><div class="nav-item"><a href="/web/javascript/javascript.html" class="nav-link">
+  JavaScript笔记
+</a></div><div class="nav-item"><a href="/web/vue/vue3.html" class="nav-link">
+  vue笔记
+</a></div><div class="nav-item"><a href="/web/React/React.html" class="nav-link">
+  react笔记
+</a></div><div class="nav-item"><a href="/web/node/Node.html" class="nav-link">
+  NodeJS笔记
+</a></div><div class="nav-item"><a href="/web/webpack/webpack.html" class="nav-link">
+  webpack笔记
+</a></div><div class="nav-item"><a href="/web/sql/mysql.html" class="nav-link">
+  sql笔记
+</a></div><div class="nav-item"><a href="/web/Browser/Browser.html" class="nav-link">
+  浏览器笔记
+</a></div><div class="nav-item"><a href="/web/ORM/ORM.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Node_ORM框架笔记
+</a></div><div class="nav-item"><a href="/web/express/express.html" class="nav-link">
+  express笔记
+</a></div><div class="nav-item"><a href="/web/netWork/netWork.html" class="nav-link">
+  计算机网络笔记
+</a></div><div class="nav-item"><a href="/web/InterviewQuestion/InterviewQuestion.html" class="nav-link">
+  面试题
+</a></div><div class="nav-item"><a href="/web/studyNote/index.html" class="nav-link">
+  工作笔记
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><a href="/" class="sidebar-heading clickable router-link-active"><span>快速上手</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>个人笔记</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/web/javascript/javascript.html" class="sidebar-link">JavaScript</a></li><li><a href="/web/webpack/webpack.html" class="sidebar-link">webpack</a></li><li><a href="/web/vue/vue3.html" class="sidebar-link">vue3</a></li><li><a href="/web/React/React.html" class="sidebar-link">React</a></li><li><a href="/web/node/Node.html" class="sidebar-link">NodeJS</a></li><li><a href="/web/sql/mysql.html" class="sidebar-link">Mysql</a></li><li><a href="/web/ORM/ORM.html" aria-current="page" class="active sidebar-link">Node_ORM</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/web/ORM/ORM.html#orm框架-sqeuelize-🎃" class="sidebar-link">ORM框架（sqeuelize）🎃</a></li><li class="sidebar-sub-header"><a href="/web/ORM/ORM.html#入门🎁" class="sidebar-link">入门🎁</a></li><li class="sidebar-sub-header"><a href="/web/ORM/ORM.html#服务端分层架构🎫" class="sidebar-link">服务端分层架构🎫</a></li><li class="sidebar-sub-header"><a href="/web/ORM/ORM.html#模型查询数据-model-query-🛒" class="sidebar-link">模型查询数据（model query）🛒</a></li><li class="sidebar-sub-header"><a href="/web/ORM/ORM.html#模型基础🏐" class="sidebar-link">模型基础🏐</a></li><li class="sidebar-sub-header"><a href="/web/ORM/ORM.html#nodejs-日志输出✌" class="sidebar-link">nodejs-日志输出✌</a></li><li class="sidebar-sub-header"><a href="/web/ORM/ORM.html#express的基本使用" class="sidebar-link">express的基本使用</a></li></ul></li><li><a href="/web/express/express.html" class="sidebar-link">express</a></li><li><a href="/web/Browser/Browser.html" class="sidebar-link">Browser</a></li><li><a href="/web/InterviewQuestion/InterviewQuestion.html" class="sidebar-link">面试题</a></li><li><a href="/web/netWork/netWork.html" class="sidebar-link">计算机网络</a></li><li><a href="/web/studyNote/studyNote.html" class="sidebar-link">工作笔记</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="orm框架-sqeuelize-🎃"><a href="#orm框架-sqeuelize-🎃" class="header-anchor">#</a> ORM框架（sqeuelize）🎃</h2> <h3 id="简介"><a href="#简介" class="header-anchor">#</a> 简介</h3> <p><img src="/assets/img/1693878830911.a374b06e.png" alt="1693878830911"></p> <p><a href="https://sequelize.org/docs/v6/core-concepts/model-basics/" target="_blank" rel="noopener noreferrer">官方文档SqeueLize<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><strong>1 ： Object Relational Mapping （对象关系映射）</strong></p> <p><strong>作用</strong></p> <ol><li>通过<code>ORM</code>框架，可以自动的把程序中的对象和数据库进行关联，更方便管理</li> <li><code>ORM</code>框架会隐藏具体的数据库底层细节，让开发者使用同样的数据库操作接口，完全对不同的数据库操作</li></ol> <p><strong>优势</strong></p> <ol><li>开发者不需要关心数据库，只需要关心自己定义的<code>model</code>即可生成数据库表字段</li> <li>可轻易的完成数据库的移植</li> <li>无需拼接复杂的sql语句即可完成精确查询功能</li> <li>连接各个数据库，统一内部操作数据，不需要手动写sql，简单高效，可维护性高</li></ol> <p><img src="/assets/img/1693879182567.294367b3.png" alt="1693879182567"></p> <h2 id="入门🎁"><a href="#入门🎁" class="header-anchor">#</a> 入门🎁</h2> <h3 id="基本配置"><a href="#基本配置" class="header-anchor">#</a> 基本配置</h3> <p><strong>desc</strong> ： 连接到数据库</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token punctuation">{</span> Sequelize <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'sequelize'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> authInfoGroup <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../../constant/index'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> <span class="token punctuation">{</span> <span class="token constant">ACCOUNT</span><span class="token punctuation">,</span> <span class="token constant">PASSWORD</span> <span class="token punctuation">}</span> <span class="token operator">=</span> authInfoGroup
+<span class="token keyword">const</span> sequelize <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Sequelize</span><span class="token punctuation">(</span><span class="token string">'ormdb'</span><span class="token punctuation">,</span> <span class="token constant">ACCOUNT</span><span class="token punctuation">,</span> <span class="token constant">PASSWORD</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">host</span><span class="token operator">:</span> <span class="token string">'localhost'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">port</span><span class="token operator">:</span> <span class="token number">3306</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">dialect</span><span class="token operator">:</span> <span class="token string">'mysql'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">logging</span><span class="token operator">:</span> <span class="token keyword">null</span> <span class="token comment">// 是否需要详细的打印日志</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">Main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// try {</span>
+  <span class="token comment">//   await sequelize.authenticate();</span>
+  <span class="token comment">//   console.log('Connection has been established successfully.');</span>
+  <span class="token comment">// } catch (error) {</span>
+  <span class="token comment">//   console.error('Unable to connect to the database:', error);</span>
+  <span class="token comment">// }</span>
+  <span class="token comment">// console.log('连接成功');</span>
+  <span class="token comment">// sequelize.close()</span>
+<span class="token punctuation">}</span>
+<span class="token function">Main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> sequelize
+</code></pre></div><h3 id="model-层"><a href="#model-层" class="header-anchor">#</a> model 层</h3> <p><code>model</code>  模型实例是ORM框架的一个核心要点，它可以根据传入的 <code>JavaScript</code>对象 帮助我们生成数据库字段，从而与数据进行统一。</p> <h4 id="创建一个模型"><a href="#创建一个模型" class="header-anchor">#</a> 创建一个模型</h4> <div class="language-JavaScript extra-class"><pre class="language-javascript"><code>sequelize<span class="token punctuation">.</span><span class="token function">define</span><span class="token punctuation">(</span><span class="token string">'模型名称'</span> <span class="token punctuation">,</span> 模型对象<span class="token punctuation">)</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> DataTypes <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'sequelize'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> sequelize <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./db'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> modeNameGroup <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../../constant'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> Admin <span class="token operator">=</span> sequelize<span class="token punctuation">.</span><span class="token function">define</span><span class="token punctuation">(</span>modeNameGroup<span class="token punctuation">.</span>Admin<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">loginId</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">type</span><span class="token operator">:</span> DataTypes<span class="token punctuation">.</span><span class="token constant">STRING</span><span class="token punctuation">,</span> <span class="token comment">// 类型</span>
+    <span class="token literal-property property">allowNull</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">// 是否允许为空</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">loginPwd</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">type</span><span class="token operator">:</span> DataTypes<span class="token punctuation">.</span><span class="token constant">STRING</span><span class="token punctuation">,</span> <span class="token comment">// 类型</span>
+    <span class="token literal-property property">allowNull</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">// 是否允许为空</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">updatedAt</span><span class="token operator">:</span> <span class="token string">'updateTime'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">deletedAt</span><span class="token operator">:</span> <span class="token string">&quot;deleteTime&quot;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">createdAt</span><span class="token operator">:</span> <span class="token string">&quot;createTime&quot;</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> Admin
+</code></pre></div><h3 id="service层"><a href="#service层" class="header-anchor">#</a> service层</h3> <p>用于处理数据操作数据库并且返回一些指定的数据等，该层会参与服务端逻辑验证，通过后响应对应的数据</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token punctuation">{</span> Admin <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../models'</span><span class="token punctuation">)</span>
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">addAdmin</span><span class="token punctuation">(</span><span class="token parameter">adminObj</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>adminObj<span class="token punctuation">)</span> <span class="token keyword">return</span>
+  <span class="token keyword">const</span> modelInstance <span class="token operator">=</span> <span class="token keyword">await</span> Admin<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>adminObj<span class="token punctuation">)</span> <span class="token comment">// 数据处理</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>modelInstance<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token comment">// 如果没有实例则 结束操作</span>
+  <span class="token keyword">return</span> modelInstance<span class="token punctuation">.</span><span class="token function">toJSON</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 返回数据处理后的对象</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">deleteAdmin</span><span class="token punctuation">(</span><span class="token parameter">id</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>id<span class="token punctuation">)</span> <span class="token keyword">return</span>
+  <span class="token comment">//  方法1 查询实例是否存在 存在 则销毁 不存在 结束</span>
+  <span class="token comment">// const modelInstance = await Admin.findByPk(id) // 查询是否有改条记录</span>
+  <span class="token comment">// modelInstance &amp;&amp; modelInstance.destroy()// 销毁实例</span>
+
+  <span class="token comment">// 方法二 通过 本身进行销毁</span>
+  Admin<span class="token punctuation">.</span><span class="token function">destroy</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token literal-property property">where</span><span class="token operator">:</span> <span class="token punctuation">{</span> id <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">updateAdmin</span><span class="token punctuation">(</span><span class="token parameter">id<span class="token punctuation">,</span> adminObj</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">/**
+   * 方式1
+   */</span>
+  <span class="token comment">// const modelInstance = await Admin.findByPk(id)</span>
+  <span class="token comment">// if (!modelInstance) return</span>
+  <span class="token comment">// modelInstance.loginId = await adminObj.loginId</span>
+  <span class="token comment">// modelInstance.save()</span>
+  <span class="token comment">// return modelInstance.toJSON()</span>
+  Admin<span class="token punctuation">.</span><span class="token function">update</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">loginId</span><span class="token operator">:</span> adminObj<span class="token punctuation">.</span>loginId <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">where</span><span class="token operator">:</span> <span class="token punctuation">{</span> id <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  addAdmin<span class="token punctuation">,</span>
+  deleteAdmin<span class="token punctuation">,</span>
+  updateAdmin
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="服务端分层架构🎫"><a href="#服务端分层架构🎫" class="header-anchor">#</a> 服务端分层架构🎫</h2> <p><img src="/assets/img/1693967058339.c472ba87.png" alt="1693967058339"></p> <h3 id="route层"><a href="#route层" class="header-anchor">#</a> route层</h3> <p><strong>作用</strong> ： 负责 前端访问服务器路由地址接口的处理，转发到对应的<code>service</code> 层，负责接口地址逻辑处理</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">express</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> studentRouter <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./modules/students'</span><span class="token punctuation">)</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token string">'/bff/student'</span> <span class="token punctuation">,</span> studentRouter<span class="token punctuation">)</span>
+app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">8081</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'listen in on 8081'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+</code></pre></div><h3 id="service层-2"><a href="#service层-2" class="header-anchor">#</a> service层</h3> <p><strong>作用</strong> ： 负责处理相关的业务逻辑，在此层验证数据等操作，通过后调用 <code>model</code>实例的方法进行 <code>crud</code>操作，让然后将对应的数据返回</p> <p><strong>example</strong>（示例）</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token punctuation">{</span> Student <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../models/index'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> isEmpty <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../utils'</span><span class="token punctuation">)</span>
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">getStudents</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> page <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> pageSize <span class="token operator">=</span> <span class="token number">10</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> where <span class="token operator">=</span> <span class="token keyword">null</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> offset <span class="token operator">=</span> <span class="token punctuation">(</span>page <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">*</span> pageSize <span class="token comment">// 分页页数  第几页 </span>
+  <span class="token keyword">const</span> limit <span class="token operator">=</span> pageSize <span class="token comment">// 一页多少条</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> count<span class="token punctuation">,</span> rows <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">await</span> Student<span class="token punctuation">.</span><span class="token function">findAndCountAll</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    where<span class="token punctuation">,</span>
+    limit<span class="token punctuation">,</span>
+    offset
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">total</span><span class="token operator">:</span> count<span class="token punctuation">,</span>
+    <span class="token literal-property property">data</span><span class="token operator">:</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>rows<span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="model层"><a href="#model层" class="header-anchor">#</a> model层</h3> <p><strong>作用</strong>： 负责模型数据的定义以及类型处理，你可以通过每个对象的 <code>set</code> or <code>get</code> 进行中间处理，你也可以手动创建该模型或者 批量创建模型，当你运行 <code>sync</code>方法时 它会同步你的模型到数据库，并且你还可以与其它表建立 外键 关系等。</p> <p><strong>example</strong>（示例）</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token punctuation">{</span> DataTypes <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'sequelize'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> sequelize <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./db'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> modeNameGroup <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../../constant'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> Student <span class="token operator">=</span> sequelize<span class="token punctuation">.</span><span class="token function">define</span><span class="token punctuation">(</span>modeNameGroup<span class="token punctuation">.</span>Student<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">type</span><span class="token operator">:</span> DataTypes<span class="token punctuation">.</span><span class="token constant">STRING</span><span class="token punctuation">,</span> <span class="token comment">// 类型</span>
+    <span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getDataValue</span><span class="token punctuation">(</span><span class="token string">'name'</span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> - </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getDataValue</span><span class="token punctuation">(</span><span class="token string">'birthdady'</span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">allowNull</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">// 是否允许为空</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">birthdady</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">type</span><span class="token operator">:</span> DataTypes<span class="token punctuation">.</span><span class="token constant">STRING</span><span class="token punctuation">,</span> <span class="token comment">// 类型</span>
+    <span class="token literal-property property">allowNull</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">// 是否允许为空</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">sex</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">type</span><span class="token operator">:</span> DataTypes<span class="token punctuation">.</span><span class="token constant">INTEGER</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">allowNull</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">updatedAt</span><span class="token operator">:</span> <span class="token string">'updateTime'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">deletedAt</span><span class="token operator">:</span> <span class="token string">&quot;deleteTime&quot;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">createdAt</span><span class="token operator">:</span> <span class="token string">&quot;createTime&quot;</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> Student
+</code></pre></div><h2 id="模型查询数据-model-query-🛒"><a href="#模型查询数据-model-query-🛒" class="header-anchor">#</a> 模型查询数据（model query）🛒</h2> <h3 id="api"><a href="#api" class="header-anchor">#</a> API</h3> <p>1  : <code>findAll</code></p> <blockquote><p>查询符合条件的所有数据，返回一个列表</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">await</span> model<span class="token punctuation">.</span><span class="token function">findAll</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span>
+</code></pre></div><p>2 : <code>findByPk</code></p> <blockquote><p>根据指定的参数查询 ，例如根据 <code>id</code>查询是否有该记录，有则返回实例，否则返回null</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">await</span> model<span class="token punctuation">.</span><span class="token function">findByPk</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span> <span class="token comment">// 查询是否有改条记录</span>
+</code></pre></div><p>3 ： <code>findOne</code></p> <blockquote><p>查找一条符合条件的记录，返回结果 有则返回实例，否则返回null</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">await</span> Admin<span class="token punctuation">.</span><span class="token function">findOne</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token literal-property property">where</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      loginId<span class="token punctuation">,</span>
+      loginPwd
+    <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>4 ： ``findOrCreate`</p> <blockquote><p>查找或者创建一条记录，如果在db中找到该数据，则进行返回，如果没有则进行创建，你可以传入 <code>defaults</code>属性</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token punctuation">[</span>user<span class="token punctuation">,</span> created<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">await</span> User<span class="token punctuation">.</span><span class="token function">findOrCreate</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">where</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">username</span><span class="token operator">:</span> <span class="token string">'sdepold'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">defaults</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">job</span><span class="token operator">:</span> <span class="token string">'Technical Lead JavaScript'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>5 : <code>findAndCountAll</code></p> <blockquote><p>查找所有的数据并且返回查询所有数据的条数</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token punctuation">{</span> count<span class="token punctuation">,</span> rows <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">await</span> Project<span class="token punctuation">.</span><span class="token function">findAndCountAll</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">where</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">title</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>like<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token string">'foo%'</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">offset</span><span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">limit</span><span class="token operator">:</span> <span class="token number">2</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>6 ： <code>bulkCreate</code></p> <blockquote><p>批量创建多条数据到数据库中，传入一个array</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">isEmpty</span><span class="token punctuation">(</span>stus<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token keyword">null</span>
+<span class="token keyword">const</span> studentIns <span class="token operator">=</span> <span class="token keyword">await</span> Student<span class="token punctuation">.</span><span class="token function">bulkCreate</span><span class="token punctuation">(</span>stus<span class="token punctuation">)</span> <span class="token comment">// 批量创建数据</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">,</span> studentIns<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>7 ： <code>destory</code></p> <blockquote><p>模型实例删除数据操作，你可以根据配置决定是否真正删除数据。</p></blockquote> <div class="language-JavaScript extra-class"><pre class="language-javascript"><code> Admin<span class="token punctuation">.</span><span class="token function">destroy</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token literal-property property">where</span><span class="token operator">:</span> <span class="token punctuation">{</span> id <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>你可以配置模型中的 参数 <code>Paranoid</code> 当 为 true 时不会真正删除数据，而是保存一个删除的时间到数据库中。</p> <h2 id="模型基础🏐"><a href="#模型基础🏐" class="header-anchor">#</a> 模型基础🏐</h2> <h3 id="模型定义"><a href="#模型定义" class="header-anchor">#</a> 模型定义</h3> <p>定义一个自己的模型，使用<code>defind</code>定义</p> <div class="language-js extra-class"><pre class="language-js"><code>sequelize<span class="token punctuation">.</span><span class="token function">define</span><span class="token punctuation">(</span>模型名称，模型选项）
+</code></pre></div><h3 id="模型配置"><a href="#模型配置" class="header-anchor">#</a> 模型配置</h3> <p><code>重要参数</code></p> <p>1  ： <code>paranoid</code></p> <p>决定是否要真正的删除数据表中的数据</p> <p>2：<code>freezeTableName</code></p> <p>是否要严格按照模型名称作为表名。</p> <p>3 ： <code>getter</code>  or  <code>setter</code></p> <p>当用户访问属性 或者设置值得时候 作一些中间操作</p> <div class="language-JavaScript extra-class"><pre class="language-javascript"><code>  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">type</span><span class="token operator">:</span> DataTypes<span class="token punctuation">.</span><span class="token constant">STRING</span><span class="token punctuation">,</span> <span class="token comment">// 类型</span>
+    <span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getDataValue</span><span class="token punctuation">(</span><span class="token string">'name'</span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> - </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getDataValue</span><span class="token punctuation">(</span><span class="token string">'birthdady'</span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">set</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">allowNull</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">// 是否允许为空</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><p>4 ： <code>validate</code></p> <p>模型属性校验，可以在当你给根据模型创建数据的时候，可以进行校验</p> <div class="language-js extra-class"><pre class="language-js"><code>  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">type</span><span class="token operator">:</span> DataTypes<span class="token punctuation">.</span><span class="token constant">STRING</span><span class="token punctuation">,</span> <span class="token comment">// 类型</span>
+    <span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getDataValue</span><span class="token punctuation">(</span><span class="token string">'name'</span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> - </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getDataValue</span><span class="token punctuation">(</span><span class="token string">'birthdady'</span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">validate</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">notEmpty</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">msg</span><span class="token operator">:</span> <span class="token string">'姓名不能数为空'</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">notNull</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">msg</span><span class="token operator">:</span> <span class="token string">'姓名不能数为空'</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">allowNull</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">// 是否允许为空</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><h2 id="nodejs-日志输出✌"><a href="#nodejs-日志输出✌" class="header-anchor">#</a> nodejs-日志输出✌</h2> <h3 id="log4js🖥"><a href="#log4js🖥" class="header-anchor">#</a> log4js🖥</h3> <p><strong>组成</strong> ： 一个日志由 [时间] + [日志等级] + [日志分类] + [日志信息]  组合而成</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> log4js <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'log4js'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> logger <span class="token operator">=</span> log4js<span class="token punctuation">.</span><span class="token function">getLogger</span><span class="token punctuation">(</span><span class="token string">&quot;javascript&quot;</span><span class="token punctuation">)</span> <span class="token comment">// 设置日志类型 ， 输出在 [2023-09-11T10:04:20.666] [INFO] javascript - logger or in not a function 中</span>
+
+logger<span class="token punctuation">.</span>level <span class="token operator">=</span> log4js<span class="token punctuation">.</span>levels<span class="token punctuation">.</span><span class="token constant">ERROR</span>
+
+logger<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">&quot;logger or in not a function&quot;</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="日志配置"><a href="#日志配置" class="header-anchor">#</a> 日志配置</h3> <p><a href="https://log4js-node.github.io/log4js-node/migration-guide.html" target="_blank" rel="noopener noreferrer">官方文档<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> log4js <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'log4js'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;path&quot;</span><span class="token punctuation">)</span>
+
+log4js<span class="token punctuation">.</span><span class="token function">configure</span><span class="token punctuation">(</span><span class="token punctuation">{</span>  <span class="token comment">// 日志配置</span>
+  <span class="token literal-property property">appenders</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token comment">// 添加一个日志映射类型</span>
+    <span class="token literal-property property">sqlLogAppender</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'file'</span><span class="token punctuation">,</span> <span class="token comment">// 输出日志类型//</span>
+      <span class="token literal-property property">filename</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'./logs'</span><span class="token punctuation">,</span> <span class="token string">'sql'</span><span class="token punctuation">,</span> <span class="token string">'sql.log'</span><span class="token punctuation">)</span> <span class="token comment">//输出日志的地址</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">app</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'dateFile'</span><span class="token punctuation">,</span> <span class="token comment">//</span>
+      <span class="token literal-property property">filename</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'./logs'</span><span class="token punctuation">,</span> <span class="token string">'app'</span><span class="token punctuation">,</span> <span class="token string">'application.log'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">layout</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token comment">// 自定义日志格式</span>
+        <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'pattern'</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">pattern</span><span class="token operator">:</span> <span class="token string">'[%h] [%d{yyyy/MM/dd-hh.mm.ss}] %c - [%p] %m'</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">maxLogSize</span><span class="token operator">:</span> <span class="token number">1024</span><span class="token punctuation">,</span> <span class="token comment">// 最大文件存储大小</span>
+      <span class="token literal-property property">keepFileExt</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token comment">// 是否保持文件以 .log结尾</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token keyword">default</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'file'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">filename</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'./logs'</span><span class="token punctuation">,</span> <span class="token string">'app'</span><span class="token punctuation">,</span> <span class="token string">'application.log'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">categories</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 日志 类型 ， 它可以根据 appenders 与之对应 然后 输出到不同的日志文件中</span>
+    <span class="token literal-property property">sqlLog</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">appenders</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'sqlLogAppender'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// 对应上方appenders</span>
+      <span class="token literal-property property">level</span><span class="token operator">:</span> <span class="token string">'all'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">app</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">appenders</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'app'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">level</span><span class="token operator">:</span> <span class="token string">'all'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token keyword">default</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">appenders</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'default'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">level</span><span class="token operator">:</span> <span class="token string">'all'</span>
+    <span class="token punctuation">}</span>
+
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+process<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'exit'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> log4js<span class="token punctuation">.</span><span class="token function">shutdown</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+exports<span class="token punctuation">.</span>sqlLog <span class="token operator">=</span> log4js<span class="token punctuation">.</span><span class="token function">getLogger</span><span class="token punctuation">(</span><span class="token string">'sqlLog'</span><span class="token punctuation">)</span>
+exports<span class="token punctuation">.</span>appLog <span class="token operator">=</span> log4js<span class="token punctuation">.</span><span class="token function">getLogger</span><span class="token punctuation">(</span><span class="token string">'app'</span><span class="token punctuation">)</span>
+exports<span class="token punctuation">.</span>logger <span class="token operator">=</span> log4js<span class="token punctuation">.</span><span class="token function">getLogger</span><span class="token punctuation">(</span><span class="token string">'default'</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="日志级别"><a href="#日志级别" class="header-anchor">#</a> 日志级别</h3> <p><img src="/assets/img/1694397366818.39beb783.png" alt="1694397366818"></p> <h2 id="express的基本使用"><a href="#express的基本使用" class="header-anchor">#</a> express的基本使用</h2></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/web/sql/mysql.html" class="prev">
+        Mysql
+      </a></span> <span class="next"><a href="/web/express/express.html">
+        express
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.a4d93d27.js" defer></script><script src="/assets/js/2.714b023e.js" defer></script><script src="/assets/js/6.33658437.js" defer></script>
+  </body>
+</html>
