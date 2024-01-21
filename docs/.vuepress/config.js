@@ -3,6 +3,7 @@ module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }]
   ],
+  plugins: ['@vuepress/back-to-top'],
   themeConfig: {
     // base: "",
     title: 'minivueBarrage',

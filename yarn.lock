@@ -1463,6 +1463,14 @@
     "@vuepress/types" "1.9.9"
     "lodash.debounce" "^4.0.8"
 
+"@vuepress/plugin-back-to-top@^1.9.10":
+  "integrity" "sha512-iInIp66wu717CAnT2pyd9Bs/vAgrUBOBIQ7WMnfJo07cW/ZIothpyrSHnpCRSsfJ/jLivMPqW0pviqppt64BzQ=="
+  "resolved" "https://registry.npmmirror.com/@vuepress/plugin-back-to-top/-/plugin-back-to-top-1.9.10.tgz"
+  "version" "1.9.10"
+  dependencies:
+    "@vuepress/types" "1.9.10"
+    "lodash.debounce" "^4.0.8"
+
 "@vuepress/plugin-last-updated@1.9.9":
   "integrity" "sha512-MV4csmM0/lye83VtkOc+b8fs0roi7mvE7BmCCOE39Z6t8nv/ZmEPOwKeHD0+hXPT+ZfoATYvDcsYU7uxbdw0Pw=="
   "resolved" "https://registry.npmmirror.com/@vuepress/plugin-last-updated/-/plugin-last-updated-1.9.9.tgz"
@@ -1524,6 +1532,15 @@
     "stylus-loader" "^3.0.2"
     "vuepress-plugin-container" "^2.0.2"
     "vuepress-plugin-smooth-scroll" "^0.0.3"
+
+"@vuepress/types@1.9.10":
+  "integrity" "sha512-TDNQn4og85onmBpLTTXXmncW3rUnYGr2MkuI8OIFJZetDNM49t1WbjNVlrT+kx7C6qXi6okDQgrHGYXajHZWfg=="
+  "resolved" "https://registry.npmmirror.com/@vuepress/types/-/types-1.9.10.tgz"
+  "version" "1.9.10"
+  dependencies:
+    "@types/markdown-it" "^10.0.0"
+    "@types/webpack-dev-server" "^3"
+    "webpack-chain" "^6.0.0"
 
 "@vuepress/types@1.9.9":
   "integrity" "sha512-ukGW49ILzLhIc7CltHMr+BeIjWKloJNN1mrvbDz3beycp9b9kgH+DXNdRIK9QCKr4fJsy7x08vNMwZr9Nq/PTQ=="
