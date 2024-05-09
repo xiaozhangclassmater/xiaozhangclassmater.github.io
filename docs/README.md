@@ -1,20 +1,14 @@
-# minivueBarrage
+## minivueBarrage(vue2)
 
-## Version description(版本说明)
+This library is based on a set of barrage plug-ins developed by Vue3. You can complete the barrage scrolling function by registering this plug-in. I hope it can help you.
 
-**npm版本** 
+此库基于Vue开发的一套弹幕插件，你可以通过注册该插件，完成弹幕滚动功能,希望它可以帮助到你。
 
-8.5.1
-**node 版本** 
 
-`node": ">=6.11.5"`
 
 [中文文档](https://xiaozhangclassmater.github.io/minivueBarrage-docs-web/#/dashboard)
 
-
-如何使用 ？ （How to use it?）
-
-vue2
+## Installation 安装
 
 ~~~sh
 npm i minivuebarrage 
@@ -27,12 +21,7 @@ yarn add minivuebarrage
 ~~~
 
 
-
-## Description（描述）
-
-minivueBarrage is a barrage component developed with the vue framework. It provides barrage resetting, opening, closing and pausing full screen, customizing ICONS, and defining user-published barrage styles, speed colors, and more
-
-## Usage（使用）
+## registry（注册）
 
 This plugin can help you quickly create a pop-up view container, you can specify operations on it, such as pause, reset, open, close and so on, let's see how to use it
 
@@ -57,7 +46,7 @@ import "minivuebarrage/lib/mini-vue-barrage.css";
 
 
 
-`components`
+## Usage（使用）
 
 ~~~vue
 <template>
@@ -89,6 +78,9 @@ export default {
 
 ~~~
 
+## Configuration（配置）
+
+
 | 字段(fields) | 类型(type) | 是否必填(require) | 描述(desc)                                                   |
 | ------------ | ---------- | ----------------- | ------------------------------------------------------------ |
 | content      | string     | true              | 弹幕内容                                                     |
@@ -104,7 +96,7 @@ export default {
 
 **Icon** ： 如果你需要给弹幕绑定Icon小图标，那你可以在当前弹幕对象中添加该属性，我会帮助你完成渲染，也许它会对你有帮助（If you need to attach a small Icon to a bullet screen, then you can add this property to the current bullet screen object, I will help you finish rendering, maybe it will help you）
 
-### 高级用法
+### Instance Methods
 
 我们对该组件实例本身暴露了以下几个方法（We exposed the following methods to the component instance itself.）。
 
@@ -147,7 +139,7 @@ export default {
  }	,
 ~~~
 
-### **参数列表**（Parameter list）
+### Attributes
 
 | props           | type        | default | isRrquire | desc                                                |
 | --------------- | ----------- | ------- | --------- | --------------------------------------------------- |
