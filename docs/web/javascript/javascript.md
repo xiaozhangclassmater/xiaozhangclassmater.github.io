@@ -23,6 +23,58 @@ object （Object/Array/RegExp/Date）
 
 **所以 null 的前三位均为 0  即 null 又是基本数据类型 又是 引用数据类型。（null 为object是第一版JavaScript 遗留的bug ）**
 
+## JavaScript 的 == 和 === 的区别 以及 原理
+
+### ==
+
+双等 判断规则
+
+1：左右各为相同类型 时 ----> 则值必须完全一样 才 返回 `true ` 否则 返回  `false`
+
+2：如果 其中 有一个 时 `null  ` 或者 `undefined  ` 另外一个也必须是 `null ` 或者 `undefined  ` 否则 返回 `false`
+
+3: 如果 左侧或者 右侧 是对象的时候 则会 调用 对象的 `Symbol.toPrimitive` 将它转换为 原始值
+
+4：强制转换后 两边均为 基本数据类型 
+
+​	如果 左右 出现 值为 `Boolean` 类型的值 ，则 Boolean -> Number 也就是 0 和 1 
+
+​	如果左右 出现 `String` 类型的值 则 
+
+​	1：看 String 是否是 正常的 `数字字符` 如果是 则 变为 Numer 类型的数字 
+
+​	2：如果是 非数字 则 会转换失败 变为 `NaN`
+
+​	3：如果是 16进制 则转换为数字 
+
+### ===
+
+严格相等运算符（`===` 和 `!==`）提供了[严格相等判定](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#%E4%B8%A5%E6%A0%BC%E7%9B%B8%E7%AD%89)语义。
+
+- 如果操作数的类型不同，则返回 `false`。
+- 如果两个操作数都是对象，只有当它们指向同一个对象时才返回 `true`。
+- 如果两个操作数都为 `null`，或者两个操作数都为 `undefined`，返回 `true`。
+- 如果两个操作数有任意一个为 `NaN`，返回 `false`。
+- 否则，比较两个操作数的值：
+  - 数字类型必须拥有相同的数值。`+0` 和 `-0` 会被认为是相同的值。
+  - 字符串类型必须拥有相同顺序的相同字符。
+  - 布尔运算符必须同时为 `true` 或同时为 `false`。
+
+严格相等运算符与[相等](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)（`==`）运算符最显著的区别是，如果操作数的类型不同，`==` 运算符会在比较之前尝试将它们转换为相同的类型。
+
+## isNaN 和 Number.isNaN 的区别？
+
+### isNaN()
+
+`isNaN` 是全局的 一个函数，用于判断值是否为 `NaN` ， 它会经历以下过程
+
+1. 对于数字类型或者非数字类型，其内部都会转换为数字类型 
+2. 再判断是否为 NaN 
+
+### Number.isNaN()
+
+`Number.isNaN()` 不会尝试将参数转换为数字，因此非数字总是返回 `false`。以下都返回 `false`：
+
 ## JavaScript中为什么0.1+0.2不等于0.3？
 
 转换过程会经过一下3步

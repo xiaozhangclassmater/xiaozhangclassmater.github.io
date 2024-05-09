@@ -132,6 +132,65 @@ module.exports = (req , res , next) => {
 }
 ~~~
 
+## 实现客户端访问一个地址，自动下载文件到本地？
+
+实现改功能的核心在于 ，服务端将 请求的响应头设置为 
+
+`Content-Disposition ： attachment; filename="filename.jpg"`
+
+这样 浏览器识别的 响应头的时候 遇到 attachment 会自动下载该文件
+
+~~~JS
+const { Router } = require('express')
+const downloadRouter = Router()
+const { downloadService  } = require('@/services')
+downloadRouter.get('/:filename', handleGetFile) // 设置 路由
+
+/**
+ * @Description: 处理客户端下载文件
+ * @author xiaoZhang
+ * @date 2023/9/20
+*/
+async function handleGetFile (req, res) {
+    await downloadService.downloadFile(req,res)
+}
+
+module.exports = downloadRouter
+
+~~~
+
+`Service.js`
+
+~~~JS
+
+const path = require('path')
+/**
+ * @Description: 下载文件
+ * @author xiaoZhang
+ * @date 2023/9/20
+*/
+exports.downloadFile = function downloadFile (req ,res) {
+  try {
+      const { filename } = req.params
+      const absPath = path.resolve(__dirname , `../../../public/assets/${filename}`)
+      res.download(absPath , filename)
+  }catch (e) {}
+}
+
+~~~
+
+### Content-Disposition
+
+在 HTTP 场景中，第一个参数或者是 `inline`（默认值，表示回复中的消息体会以页面的一部分或者整个页面的形式展示），或者是 `attachment`（意味着消息体应该被下载到本地；大多数浏览器会呈现一个“保存为”的对话框，将 `filename` 的值预填为下载后的文件名，假如它存在的话）
+
+
+
+```JSON
+Content-Disposition: inline
+Content-Disposition: attachment
+Content-Disposition: attachment; filename="filename.jpg"
+```
+
 ## cookie的组成⚽
 
 cookie是浏览器中特有的一个概念，它就像浏览器的专属卡包，管理着各个网站的身份信息。

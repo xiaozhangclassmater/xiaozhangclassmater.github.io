@@ -1,5 +1,32 @@
 # 1：webpack基础篇
 
+## webpack启动一个服务
+
+webpack 启动一个服务的必要因素
+
+1：需要 webpack-dev-serve 插件的支持
+
+2：webpack-CLI 的脚手架包支持
+
+~~~json
+{
+    "serve": "webpack-dev-serve --config ./webpack.config.js"
+}
+~~~
+
+~~~js
+// webpack.config.js
+module.exports = {
+    entry:{
+        index: './src/index.js',
+    },
+    output:{
+        path: path.resolve(__dirname , './dist')
+        filename: '[name].js'
+    }
+}
+~~~
+
 ## webpack 中如何配置打包 指定的入口文件？
 
 ```js
