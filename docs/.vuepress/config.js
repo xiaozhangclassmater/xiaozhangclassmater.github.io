@@ -69,12 +69,12 @@ module.exports = {
         children: [
           {
             collapsable: false,
-            title: 'minivueBarrage（vue2）',
+            title: 'vue2',
             path: '/',
           },
           {
             collapsable: false,
-            title: 'minivueBarrage（vue3）',
+            title: 'vue3',
             path: '../web/minivueBarrageV3/minivueBarrageV3.md',
           }
         ]
