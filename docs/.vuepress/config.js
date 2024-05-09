@@ -67,7 +67,16 @@ module.exports = {
         collapsable: true, // 可选的, 默认值是 true,
         sidebarDepth: 1,    // 可选的, 默认值是 1
         children: [
-          '/'
+          {
+            collapsable: false,
+            title: 'minivueBarrage（vue2）',
+            path: '/',
+          },
+          {
+            collapsable: false,
+            title: 'minivueBarrage（vue3）',
+            path: '../web/minivueBarrageV3/minivueBarrageV3.md',
+          }
         ]
       },
       {
