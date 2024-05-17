@@ -109,6 +109,11 @@ module.exports = {
           },
           {
             collapsable: false,
+            title: '正则表达式',
+            path: '../web/regularRules/regularRules.md',
+          },
+          {
+            collapsable: false,
             title: 'Mysql',
             path: '../web/sql/mysql.md',
           },
